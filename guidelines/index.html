@@ -1,0 +1,1090 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://objectstorage.me-jeddah-1.oraclecloud.com/n/axcv6afvufi6/b/Rum-JS-Public/o/elastic-apm-rum.umd.min.js"
+            crossorigin></script>
+
+    <script>
+        elasticApm.init({
+            serviceName: 'GCC-Frontend',
+            serverUrl: 'https://apm-lean.acuative-me.com:8200',
+            environment: 'Production',
+        })
+    </script>
+
+
+    <link rel="icon" type="image/x-icon" href="../static/svg/logo-favicon-light.svg">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146902071-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-146902071-1');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Wafid | وافد</title>
+    <meta name="description" content="Wafid is a program under the umbrella of the Gulf Health Council that enables individuals bound to work or reside in the GCC to book their medical check-up appointments.
+    وافد هو احدى برامج مجلس الصحة الخليجي غرضه توفير مواعيد الفحص الطبي للوافدين القادمين الى دول مجلس التعاون الخليجي بغرض العمل او الإقامة.">
+    <meta name="keywords"
+          content="Wafid, GCC, GHC, Medical center, Gulf Cooperation Council States, Medical Examinations, health check-up, appointment, medical centers accreditation, Accreditation status">
+
+
+    <!-- ISO 3166-1-alpha-2 Flags style-->
+    
+
+    <link rel="stylesheet" href="../static/country-flags/image_sprite/ip2location-image-sprite.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" crossorigin=""/>
+
+
+    
+    
+        
+
+            <link rel="stylesheet" href="../static/vendor/semantic/dist/semantic.min.css">
+            <link rel="stylesheet" href="../static/css/semantic-responsive.css">
+
+            <!-- Glide.js styles -->
+            <link rel="stylesheet" href="../static/css/vendor/glide.core.min.css">
+            <link rel="stylesheet" href="../static/css/vendor/glide.theme.min.css">
+
+            <!-- CropperJS styles -->
+            <link rel="stylesheet" href="../static/css/vendor/cropper.min.css">
+
+            <!-- Custom styles -->
+            <link rel="stylesheet" href="../static/css/main.css">
+            <link rel="stylesheet" href="../static/css/menu.css">
+            <link rel="stylesheet" href="../static/css/instant-notifications.css">
+
+            <!-- Components -->
+            <link rel="stylesheet" href="../static/css/components/breadcrumbs.css">
+            <link rel="stylesheet" href="../static/css/components/cards.css">
+            <link rel="stylesheet" href="../static/css/components/forms.css">
+            <link rel="stylesheet" href="../static/css/components/glide.css">
+            <link rel="stylesheet" href="../static/css/components/menu.css">
+            <link rel="stylesheet" href="../static/css/components/table.css">
+            <link rel="stylesheet" href="../static/css/components/message.css">
+            <link rel="stylesheet" href="../static/css/components/modal.css">
+            <link rel="stylesheet" href="../static/css/components/icons.css">
+        
+    
+    
+        <link rel="stylesheet" href="../static/css/pages/guidelines.css">
+    
+
+    
+</head>
+<body>
+
+    
+        <div class="ui menu basic borderless gcc-menu">
+            
+                <div class="item">
+                    <a href="../index.html" id="gcc-header-icon-continer" class="header item brand menu-lsc-fix">
+                        <img class="ui image" src="../static/svg/logo.svg">
+                    </a>
+                </div>
+                
+
+                
+                    <div class="ui container">
+                    <div class="ui grid gcc-submenu-wrapper">
+                        <div class="full wide column">
+                            <div class="ui menu stackable gcc-submenu">
+                                <div class="ui container centered gcc-submenu-continer width-edit">
+                                    
+
+
+
+<a class=" item" href="../index.html">Home</a>
+
+<!---->
+<!--    <div class="ui pointing dropdown item None">-->
+<!--        GHC accreditation-->
+<!--        <i class="dropdown icon"></i>-->
+<!--        <div class="menu">-->
+<!--            <a class="item"-->
+<!--               href="/accreditation/apply/">Apply for accreditation </a>-->
+<!--            <a class="item"-->
+<!--               href="/accreditation/status/">Check accreditation status</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+
+
+
+
+    <div class="ui pointing dropdown item None">
+        Medical Examinations
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item"
+               href="../book-appointment/index.html">Book an Appointment </a>
+            <a class="item"
+               href="../search-slip/index.html">Appointment Slips</a>
+            <a class="item"
+               href="../medical-status-search/index.html">Medical Examination Result</a>
+        </div>
+    </div>
+
+
+
+<!--<a class=" item"-->
+<!--   href="/medical-status-search/">Health Check-Up</a>-->
+
+<!--<a class=" item"-->
+<!--   href="/medical-center/medical-center/">Medical centers</a>-->
+
+
+    <div class="ui pointing dropdown item None">
+        Medical Centers
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <a class="item"
+               href="../medical-center/medical-center/index.html">Wafid Medical Centers Accreditation</a>
+            <a class="item"
+               href="../medical-center/search/index.html">Medical Centers List</a>
+        </div>
+    </div>
+
+
+
+<a class="active-item item"
+   href="index.html">Guidelines</a>
+
+<!---->
+<!--    <div class="ui pointing dropdown item None">-->
+<!--        Check status-->
+<!--        <i class="dropdown icon"></i>-->
+<!--        <div class="menu">-->
+<!--            <a class="item"-->
+<!--               href="/medical-status-search/">Check candidate status</a>-->
+<!--            <a class="item"-->
+<!--               href="/certificate-search/">Membership certeficate</a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+
+
+<a class=" item"
+   href="../faq/index.html">FAQs</a>
+<!--<a class="item" href="/static/pdf/Regulations%20of%20Medical%20Examination%20of%20Expatriates%20Coming%20to%20GCC%20States%20for%20Work%20or%20Residence.pdf"-->
+<!--   target="_blank">Rules and regulations</a>-->
+
+<a class=" item" href="../contact-us/index.html">Contact Us</a>
+
+
+
+                                    
+                                        <a class="item mobile tablet only"
+                                           href="../login/index.html">Login</a>
+                                    
+
+                                    
+                                        <div class="item support-phone mobile tablet only">
+                                            <img src="../static/svg/headset.svg" class="support-icon">
+                                            <b>
+                                                <a href="tel:+966920023560">+966920023560</a>
+                                            </b>
+                                        </div>
+                                    
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+                <div class="right menu" style="padding-right: 3%">
+                    
+                    
+                        <div class="item tablet or lower hidden">
+                            <a class="ui secondary button" id="gcc-header-login-botton"
+                               href="../login/index.html">Login</a>
+                        </div>
+                    
+
+                    <div class="mobile tablet only right menu menu-icon menu-lsc-fix">
+                        <button class="button basic" id="menubutton">
+                            <i class="bars icon"></i>
+                            <i class="x icon"></i>
+                        </button>
+                    </div>
+                </div>
+
+            
+        </div>
+    
+
+    
+    
+
+
+
+
+
+    <main class="">
+        
+
+        
+    <div class="ui container content-container">
+        <h2 class="ui header">Guidelines</h2>
+        <div class="ui stackable two column vertically grid container">
+            
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Medical_Report.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=IHGLq8b4fA9kk50E7Kdtc%2BY8woY%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Medical Report
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D9%86%D9%85%D9%88%D8%B0%D8%AC_%D8%A7%D9%84%D9%83%D8%B4%D9%81_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=XJOTch7lepnQQx8UrieFQ9SAw2Q%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					نموذج الكشف الطبي
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Complaint_Form.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=4ufc3os%2ByStYgW7UvWv1Rb3h7NA%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Complaint Form
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D9%86%D9%85%D9%88%D8%B0%D8%AC_%D8%A7%D9%84%D8%B4%D9%83%D8%A7%D9%88%D9%89.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=w7wGepu51GmZP%2FlCCP5E7S7hR1o%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					نموذج الشكاوى
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Components_of_Expatriate_Medical_Examinations.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=lwbLW0jn4lRrVt%2F4qtdWBlAHHrI%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Components of Expatriate Medical Examinations
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA_%D8%A7%D9%84%D9%81%D8%AD%D9%88%D8%B5%D8%A7%D8%AA_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=eCE%2BiPIARp3LKPkHqys9%2FeVhRPM%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					مكونات الفحوصات الطبية
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Accreditation_Criteria_and_Requirements_of_Expatriates_Health_Check-Up_Centers.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=3tF43jHEqDTTefw8dEqJYGi0zJw%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Accreditation Criteria and Requirements of Expatriates’ Health Check-Up Centers
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D9%85%D8%B9%D8%A7%D9%8A%D9%8A%D8%B1_%D9%88%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA_%D8%A7%D8%B9%D8%AA%D9%85%D8%A7%D8%AF_%D9%85%D8%B1%D8%A7%D9%83%D8%B2_%D8%A7%D9%84%D9%81%D8%AD%D8%B5_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9_%D9%88%D8%AA%D9%82%D9%8A%D9%8A%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2_%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=OG3RQCUSG4IGMuT7ELn69zZOwM8%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					معايير ومتطلبات اعتماد مراكز الفحص الطبي الجديدة وتقييم المراكز المعتمدة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Guidelines_for_Infection_Control__Medical_Waste_Disposal.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=6vEwZvUQqoGqiJTdi3KCD15vRsc%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Guidelines for Infection Control &amp; Medical Waste Disposal
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%B6%D9%88%D8%A7%D8%A8%D8%B7_%D9%88%D8%B4%D8%B1%D9%88%D8%B7_%D9%85%D9%83%D8%A7%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B9%D8%AF%D9%88%D9%89_%D9%88%D8%A7%D9%84%D8%AA%D8%AE%D9%84%D8%B5_%D8%A7%D9%84%D8%A7%D9%85%D9%86_%D9%84%D9%84%D9%86%D9%81%D8%A7%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=bKAFFkfnlTgp3P0Wq3H9FPxqNuk%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					ضوابط وشروط مكافحة العدوى والتخلص الآمن للنفايات الطبية
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Evaluation_Guide_for_New_and_Accredited_Health_Centers.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=ypJFLB3SZySlwaSVj3WiNQVJWTc%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Evaluation Guide for New and Accredited Health Centers
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%AF%D9%84%D9%8A%D9%84_%D8%AA%D9%82%D9%8A%D9%8A%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2_%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9_%D9%88%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=HMIZKJVgrmkZr52ZTJlNFkCk9nI%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					دليل تقييم المراكز الصحية الجديدة والمعتمدة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Authorization_letter_of_medical_center_representative_on_WAFID_platform.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=B0dBwpzgiGuz%2Fg8stZ4k%2Bag9N6M%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Authorization letter of medical center representative on WAFID platform
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%AE%D8%B7%D8%A7%D8%A8_%D8%A7%D9%84%D8%AA%D9%81%D9%88%D9%8A%D8%B6_%D9%84%D9%85%D9%85%D8%AB%D9%84_%D9%85%D8%B1%D9%83%D8%B2_%D8%B7%D8%A8%D9%8A.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=%2FtcL7izX2NFlanjVmwa6Pq%2FWWMk%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					خطاب التفويض لممثل مركز طبي
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Medical_Unfitness_Cases.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=LVgdWAIx7xyYXX1WeBwssTU2234%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Medical Unfitness Cases
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%AD%D8%A7%D9%84%D8%A7%D8%AA_%D8%B9%D8%AF%D9%85_%D8%A7%D9%84%D9%84%D9%8A%D8%A7%D9%82%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=0f89OpSJnYbG0YXVqThjkhkF12Q%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					حالات عدم اللياقة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/WAFID_Program_Mechanism_for_Handling_Complaints_and_Propositions.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=7lv8E8LdkpH0DLr6GjGddCaCmBw%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					WAFID Program Mechanism for Handling Complaints and Propositions
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%85%D9%84_%D9%85%D8%B9_%D8%A7%D9%84%D8%B4%D9%83%D8%A7%D9%88%D9%89_%D9%88%D8%A7%D9%84%D9%85%D9%82%D8%AA%D8%B1%D8%AD%D8%A7%D8%AA.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=6hN8%2FSnRCyWiWEVNvAtAqh0GD%2Bo%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					آلية التعامل مع الشكاوى والمقترحات
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Unfit_Cases_Calculation_Procedure.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=m0V%2BHrv57dspZIYBSk9mnCpjjl4%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Unfit Cases Calculation Procedure
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D9%84%D9%8A%D8%A9_%D8%A7%D8%AD%D8%AA%D8%B3%D8%A7%D8%A8_%D8%A7%D9%84%D8%AD%D8%A7%D9%84%D8%A7%D8%AA_%D8%A7%D9%84%D8%BA%D9%8A%D8%B1_%D9%84%D8%A7%D9%8A%D9%82%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=rxoC8VHCLrGJ1sf2x96ZGyzrFHs%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					آلية احتساب الحالات الغير لائقة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Financial_Rules_and_Regulations_for_WAFID_Program.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=ikYFp%2FDKw%2FswEFBq2OaZwIgB1sU%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Financial Rules and Regulations for WAFID Program
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%B9%D8%AF_%D9%88%D8%A7%D9%84%D8%B6%D9%88%D8%A7%D8%A8%D8%B7_%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9_%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC_%D9%88%D8%A7%D9%81%D8%AF.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=%2BMVuxI7Nfl%2FExsjsT9wvPPOTHVc%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					القواعد والضوابط المالية لبرنامج وافد
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Accredited_Centers_Evaluation_Form_tWlvFT5.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=dfDcvQ4TM0qFWD%2BRZQqbCwl1%2FPc%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Accredited Centers Evaluation Form
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D8%B3%D8%AA%D9%85%D8%A7%D8%B1%D8%A9_%D8%AA%D9%82%D9%8A%D9%8A%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2_%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9_3KyVueB.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=qgPZ4cq%2Fk5q5pYBGQuyWdMwojrQ%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					استمارة تقييم المراكز المعتمدة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/New_Centers_Evaluation_Form.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=IBHHgkJcSM6gd2CRvjQzawlCBpQ%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					New Centers Evaluation Form
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D8%B3%D8%AA%D9%85%D8%A7%D8%B1%D8%A9_%D8%AA%D9%82%D9%8A%D9%8A%D9%85_%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D9%83%D8%B2_%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=%2FpIC4MJP1LWZ6Us20Au9%2BkYR%2F98%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					استمارة تقييم المراكز الجديدة
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Guidelines_for_Safe_Vaccine_Storage.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=Nr9FVsUYwy5aYYGNLfCinhclWbw%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Guidelines for Safe Vaccine Storage
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D8%B1%D8%B4%D8%A7%D8%AF%D8%A7%D8%AA_%D8%AA%D8%AE%D8%B2%D9%8A%D9%86_%D9%88%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9_%D8%A7%D9%84%D8%AA%D8%B7%D8%B9%D9%8A%D9%85%D8%A7%D8%AA_%D8%A8%D8%B4%D9%83%D9%84_%D8%A7%D9%85%D9%86.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=WoWEzCljQKegGOl03LOckeuy8Mw%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					إرشادات تخزين ومعالجة التطعيمات بشكل آمن
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/Violations_and_Penalties_related_to_Wafid_Program.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=3MsI46sW9QO%2BbOPa4Cph7PsKBmk%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					Violations and Penalties related to Wafid Program
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D9%84%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA_%D9%88%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A1%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%D8%A9_%D8%A8%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC_%D9%88%D8%A7%D9%81%D8%AF.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=Hbcy8X%2FB7Jk5ggLmAxh%2FnvFwpBY%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					المخالفات والجزاءات المتعلقة ببرنامج وافد
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/WAFID_program_Regulations_of_Expatriates_Medical_Examination.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=tX6sUtDaR5RTqJnOYJ%2FnddHcA0A%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					WAFID program Regulations of Expatriates Medical Examination
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+                
+                
+<div class="column">
+	<a class="ui cards" href="https://api-minio.lean.sa/poj-gcc-mi-media01/guidelines/%D8%A7%D9%84%D9%84%D8%A7%D9%8A%D8%AD%D8%A9_%D8%A7%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%85%D9%8A%D8%A9_%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC_%D9%88%D8%A7%D9%81%D8%AF.pdf?AWSAccessKeyId=J28BXINXDZU7TC3A9XTMU1FR&amp;Signature=3WIBLHuaJooafYtloVpifLb6GGk%3D&amp;Expires=1747699321" target="_blank">
+		<div class="card gcc-guidelines-card">
+			<div class="content">
+				<div class="description" style="margin-right: 75px !important ;font-size :1.28571429em ; font-weight: 700">
+					اللائحة التنظيمية لبرنامج وافد
+				</div>
+				<img class="right floated  ui image"
+					 src="../static/svg/download_icon_guide.svg">
+				
+			</div>
+		</div>
+	</a>
+</div>
+
+
+                
+                    
+                
+                
+            
+            
+            
+        </div>
+
+
+    </main>
+
+
+
+    <div class="ui vertical basic segment footer">
+    <div class="ui container center aligned">
+    <div class="ui container center aligned">
+        <img class="footer-logo" src="../static/svg/gcc-old-logo-white.svg" alt="gulf health council logo">
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/ghc_gcc/channel/?hl=en"><img class="social-media-icons-colors"
+                                                                            src="../static/svg/instagram.svg"
+                                                                            alt="instagram"></a>
+            <a href=" https://ar-ar.facebook.com/GHCouncil/"><img class="social-media-icons-colors"
+                                                                  src="../static/svg/facebook.svg" alt="facebook"></a>
+            <a href="https://twitter.com/ghc_gcc"><img class="social-media-icons-colors"
+                                                       src="../static/svg/twitter.svg" alt="twitter"></a>
+            <a href="https://www.youtube.com/channel/UCrKbHYpmpC_OrAfZ5P_qZXA"><img class="social-media-icons-colors"
+                                                                                    src="../static/svg/youtube.svg"
+                                                                                    alt="youtube"></a>
+        </div>
+        <div class="copyright">
+            <div class="copyright">
+                <span>@ 2025 </span>
+                Gulf Health Council. All rights reserved
+            </div>
+            
+        </div>
+    </div>
+
+
+    
+
+<script src="../static/jsi18n/en/djangojs.js"></script>
+
+    <script src="../static/vendor/jquery.min.js"></script>
+    <script src="../static/vendor/semantic/dist/semantic.min.js"></script>
+    <script src="../static/js/vendor/jquery.inputmask.min.js"></script>
+    <script src="../static/js/vendor/cropper.min.js"></script>
+    <script src="../static/js/vendor/jquery-cropper.min.js"></script>
+    <script src="../static/js/vendor/glide.min.js"></script>
+    <script src="../static/js/vendor/js.cookie.js"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="../static/js/table-config.js"></script>
+    <script src="../static/js/purify.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.ui.dropdown').dropdown();
+            $('.ui.dropdown.item').dropdown({on: 'hover'});
+            $('.ui.checkbox').checkbox();
+            $('.message .close')
+                .on('click', function () {
+                    $(this)
+                        .closest('.message')
+                        .transition('fade');
+                });
+        });
+    </script>
+
+    <!-- start forms and widgets-specific -->
+    <script src="../static/vendor/semantic-ui-calendar/calendar.min.js"></script>
+    <script src="../static/vendor/semantic/dist/components/dropdown.js"></script>
+    <script src="../static/vendor/state-machine/state-machine.min.js"></script>
+    <script src="../static/js/calendar-widget.js"></script>
+    <script src="../static/js/vendor/moment.js"></script>
+    <script src="../static/js/components/single-dropdown-widget.js"></script>
+    <script src="../static/js/components/multiple-dropdown-widget.js"></script>
+    <script src="../static/js/captcha.js"></script>
+    <script src="../static/js/components/file-widget.js"></script>
+    <script src="../static/js/components/number-input-widget.js"></script>
+    <script src="../static/js/components/labeled-select-widget.js"></script>
+    <script src="../static/js/city-country-controls.js"></script>
+
+    <!-- end forms and widgets-specific -->
+
+
+
+    <script>
+        const markerIsActive = '';
+        const markerProjectID = '';
+        if (markerIsActive === 'True') {
+            window.markerConfig = {
+                project: markerProjectID,
+                source: 'snippet'
+            };
+
+            !function (e, r, a) {
+                if (!e.__Marker) {
+                    e.__Marker = {};
+                    var t = [], n = {__cs: t};
+                    ["show", "hide", "isVisible", "capture", "cancelCapture", "unload", "reload", "isExtensionInstalled", "setReporter", "setCustomData", "on", "off"].forEach(function (e) {
+                        n[e] = function () {
+                            var r = Array.prototype.slice.call(arguments);
+                            r.unshift(e), t.push(r)
+                        }
+                    }), e.Marker = n;
+                    var s = r.createElement("script");
+                    s.async = 1, s.src = "https://edge.marker.io/latest/shim.js";
+                    var i = r.getElementsByTagName("script")[0];
+                    i.parentNode.insertBefore(s, i)
+                }
+            }(window, document);
+        }
+    </script>
+
+</body>
+</html>
